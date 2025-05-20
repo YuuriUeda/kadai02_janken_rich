@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-image: url('https://as2.ftcdn.net/v2/jpg/11/06/88/97/1000_F_1106889796_VLUfP3wPWm1Ov1tP8ThV4ViKfZzrCvfj.jpg');
+    background-size: cover;
+    /* background-color: #fff; */
+    /* border-bottom: 1px solid #ccc; */
+    color: #ccc;
+    font-size: large;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+main{
+    /* border-bottom:1px solid #ccc; */
+}
+h2{
+    text-align: center;
+    height: 60px;
+}
+.A{
+    font-size: medium;
+    height: 24px;
+}
+/* #gu_btn{width: 300px;} */
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    /* border-bottom:1px solid #fff; */
+    height:200px;
+}
+ul{
+    padding: 0;
+    /* border-top: 1px solid #000000; */
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    /* border: 1px solid #666; */
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    overflow: hidden;
+}
+li:hover{
+    /* background: #0066CC;
+    color:#fff; */
+    transform: scale(1.2,1.2);
+}
+div{text-align: center;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="samplerich.css">
+<title>いつの日か王子様が</title>
+</head>
+<body>
+
+<header>
+  <h1>いつの日か王子様が</h1>
+  <h2>～だからデブとは呼ばないで～</h2>
+</header>
+
+<main>
+  <h2>今日の背徳おひるごはん<h2>
+    <p class="A">今日のメニューは・・・？</p>
+  <ul id="janken">
+    <li id="gu_btn"><img src="https://pbs.twimg.com/media/GQcQavcaIAMotkY.jpg"width="300"height="350"></li>
+    <li id="par_btn"><img src="https://www.guidoor.jp/media/wp-content/uploads/2020/02/toyotomihideyoshi.jpg"width="300"height="350"></li>
+    <li id="cho_btn"><img src="https://mag.japaaan.com/wp-content/uploads/2018/10/800px-Tokugawa_Ieyasu2.jpg"width="300"height="350"></li>
+  </ul>
+  <div>対する武将は・・・？「<span id="pc_hands">だぁれ？</span>」</div>
+  <div id="judgment">勝負！</div>
+
+  <div>
+
+  </div>
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+
+//ここからやりたいこと
+//変数10にして、おススメドリンク、おやつとか出てくるようにしたい
+//栄養バランスのアドバイス込み
+
+const g = "#gu_btn"; //ラーメン
+const c = "#cho_btn";//かつ丼
+const p = "#par_btn"; //ビッグマックセット
+
+$(g).on("click",function(){
+  const r = Math.ceil(Math.random()*3);
+  $("#pc_hands").html("");{
+    if(r==1){  //1はグー
+      $("#pc_hands").html("織田信長");
+      $("#judgment").html("次の戦に備えよ！");
+      }  //r==1の終わり
+  if(r==2){ //2はチョキ
+      $("#pc_hands").html('徳川家康');
+      $("#judgment").html("長篠の戦に勝利した！");  
+      }  //r==2の終わり
+  if(r==3){
+    $("#pc_hands").html("豊臣秀吉");
+    $("#judgment").html("敗北orz");
+      }  //r==3の終わり
+  }  //pchands.htmlの終わり
+});  //gクリックしたら・・・の終わり
+
+
+$(c).on("click",function(){
+  const r = Math.ceil(Math.random()*3);
+  $("#pc_hands").html("");{
+    if(r==1){  //1はグー
+      $("#pc_hands").html("織田信長");
+      $("#judgment").html("敗北orz");
+      }  //r==1の終わり
+  if(r==2){ //2はチョキ
+      $("#pc_hands").html('徳川家康');
+      $("#judgment").html("次の戦に備えよ！");  
+      }  //r==2の終わり
+  if(r==3){
+    $("#pc_hands").html("豊臣秀吉");
+    $("#judgment").html("大坂夏の陣に勝利した！");
+      }  //r==3の終わり
+  }  //pchands.htmlの終わり
+});  //gクリックしたら・・・の終わり
+
+
+$(p).on("click",function(){
+  const r = Math.ceil(Math.random()*3);
+  $("#pc_hands").html("");{
+    if(r==1){  //1はグー
+      $("#pc_hands").html("織田信長");
+      $("#judgment").html("山崎の戦に勝利した！");
+      }  //r==1の終わり
+  if(r==2){ //2はチョキ
+      $("#pc_hands").html('徳川家康');
+      $("#judgment").html("敗北orz");  
+      }  //r==2の終わり
+  if(r==3){
+    $("#pc_hands").html("豊臣秀吉");
+    $("#judgment").html("次の戦に備えよ！");
+      }  //r==3の終わり
+  }  //pchands.htmlの終わり
+});  //gクリックしたら・・・の終わり
+
+
+
+
+
+
+//　以下、すとらぐりんぐの軌跡　↓
+
+// $(g).on("click",function () {
+//   const r = Math.ceil(Math.random()*3);
+// $("#pc_hands").html("");{
+//   if(r==1){  //1はグー
+//     $("#pc_hands").html("グー");
+
+//   if(r==2){ //2はチョキ
+//     $("#pc_hands").html('チョキ');  
+//   }
+//   if(r==3){
+//     $("#pc_hands").html("パー");
+//   }
+// }
+// }); 
+//   const r = Math.ceil(Math.random()*3);
+// $("#pc_hands").html("");{
+//   if(r==1){  //1はグー
+//     $("#pc_hands").html("グー");
+
+//   if(r==2){ //2はチョキ
+//     $("#pc_hands").html('チョキ');  
+//   }
+//   if(r==3){
+//     $("#pc_hands").html("パー");
+//   }
+// }
+
+// )};
+
+// $("#janken").on("click",function(){
+//   const r = Math.ceil(Math.random()*3);
+// //#jankenに乱数を設定したつもり
+ 
+//    $("#pc_hands").html("");{ //ここでPCの出目は？を規定したつもり
+
+//   if(r==1){  //1はグー　のつもり
+//       //todos
+//       // ・PCが出したものを表示
+//       $("#pc_hands").html("グー");
+      
+//       //todos
+//       // ・人間側の出したものに対する勝敗　★動くのに間違っとるってなに・・・
+
+//       // $(g).on("click",function(){
+//         $("#judgment").html("あいこ");
+//       // });
+//       // $(c).on("click",function(){
+//         $("#judgment").html("勝ち");
+//       // });
+//       // $(p).on("click",function(){
+//         $("#judgment").html("負け");
+//       // });
+
+//     }
+//   }
+// if(r == 2){ //2はチョキ
+//       $("#pc_hands").html('チョキ');
+
+//       // $(g).on("click",function(){
+//         $("#judgment").html("負け");
+//       // });
+//       $(c).on("click",function(){
+//         $("#judgment").html("あいこ");
+//       });
+//       $(p).on("click",function(){
+//         $("#judgment").html("勝ち");
+//       });
+
+//     }
+// if(r == 3){    //3はパー
+//   $("#pc_hands").html('パー');
+
+//     //  $(g).on("click",function(){
+//         $("#judgment").html("勝ち");
+//       // });
+//       $(c).on("click",function(){
+//         $("#judgment").html("負け");
+//       });
+//       $(p).on("click",function(){
+//         $("#judgment").html("あいこ");
+//       });
+
+// }
+
+//   ;})
+    
+    
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
